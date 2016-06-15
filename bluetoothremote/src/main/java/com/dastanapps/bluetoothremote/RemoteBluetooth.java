@@ -18,6 +18,8 @@ import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.nio.charset.Charset;
+
 public class RemoteBluetooth extends AppCompatActivity {
 
     // Intent request codes
@@ -92,7 +94,7 @@ public class RemoteBluetooth extends AppCompatActivity {
                             initY = event.getY();
                             if (disX != 0 || disY != 0) {
                                 String mousePtr = disX + "," + disY;
-                                mCommandService.write(mousePtr.getBytes()); //send mouse movement to server
+                                mCommandService.write(mousePtr); //send mouse movement to server
                             }
                             mouseMoved = true;
                             break;

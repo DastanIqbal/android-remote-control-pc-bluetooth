@@ -1,8 +1,12 @@
 package com.dastanapps.bluetoothremote;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.nio.charset.Charset;
 import java.util.UUID;
 
 import android.bluetooth.BluetoothAdapter;
@@ -39,10 +43,10 @@ public class BluetoothCommandService {
     public static final int STATE_CONNECTED = 3;  // now connected to a remote device
     
     // Constants that indicate command to computer
-    public static final int EXIT_CMD = -1;
-    public static final int VOL_UP = 1;
-    public static final int VOL_DOWN = 2;
-    public static final int MOUSE_LEFT_CLICK = 3;
+    public static final String EXIT_CMD = "-1";
+    public static final String VOL_UP = "1";
+    public static final String VOL_DOWN = "2";
+    public static final String MOUSE_LEFT_CLICK = "3";
     
     /**
      * Constructor. Prepares a new BluetoothChat session.
@@ -159,7 +163,7 @@ public class BluetoothCommandService {
      * @param out The bytes to write
      * @see ConnectedThread#write(byte[])
      */
-    public void write(byte[] out) {
+    public void write(String out) {
         // Create temporary object
         ConnectedThread r;
         // Synchronize a copy of the ConnectedThread
@@ -170,7 +174,7 @@ public class BluetoothCommandService {
         // Perform the write unsynchronized
         r.write(out);
     }
-    
+
     public void write(int out) {
     	// Create temporary object
         ConnectedThread r;
@@ -351,7 +355,13 @@ public class BluetoothCommandService {
                 Log.e(TAG, "Exception during write", e);
             }
         }
-        
+
+        PrintWriter out;
+        public void write(String str){
+            out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(mmOutStream)), true); //create output stream to send data to server
+            out.println(str);
+        }
+
         public void write(int out) {
         	try {
                 mmOutStream.write(out);
@@ -366,7 +376,7 @@ public class BluetoothCommandService {
 
         public void cancel() {
             try {
-            	mmOutStream.write(EXIT_CMD);
+            	mmOutStream.write(EXIT_CMD.getBytes(Charset.defaultCharset()));
                 mmSocket.close();
             } catch (IOException e) {
                 Log.e(TAG, "close() of connect socket failed", e);
