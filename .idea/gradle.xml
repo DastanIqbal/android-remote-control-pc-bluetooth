@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bluetoothremote" />
             <option value="$PROJECT_DIR$/server" />
+            <option value="$PROJECT_DIR$/wifiremotecontrol" />
           </set>
         </option>
         <option name="myModules">
@@ -19,6 +20,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bluetoothremote" />
             <option value="$PROJECT_DIR$/server" />
+            <option value="$PROJECT_DIR$/wifiremotecontrol" />
           </set>
         </option>
       </GradleProjectSettings>

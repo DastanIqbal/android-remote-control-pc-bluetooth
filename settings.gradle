@@ -1,1 +1,1 @@
-include ':app', ':server', ':bluetoothremote'
+include ':app', ':server', ':bluetoothremote', ':wifiremotecontrol'
