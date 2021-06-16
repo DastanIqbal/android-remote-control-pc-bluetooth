@@ -1,1 +1,5 @@
 /build
+/out
+/.idea/libraries
+/.idea/vcs.xml
+/.idea/workspace.xml

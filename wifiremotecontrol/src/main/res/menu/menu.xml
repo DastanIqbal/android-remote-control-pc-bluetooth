@@ -4,6 +4,5 @@
     <item
         android:id="@+id/action_connect"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_cast_black_24dp"
         android:title="Connect" />
 </menu>
