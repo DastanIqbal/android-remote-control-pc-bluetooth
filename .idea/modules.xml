@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RemoteControl.iml" filepath="$PROJECT_DIR$/RemoteControl.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bluetoothremote/bluetoothremote.iml" filepath="$PROJECT_DIR$/bluetoothremote/bluetoothremote.iml" />
-      <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/wifiremotecontrol/wifiremotecontrol.iml" filepath="$PROJECT_DIR$/wifiremotecontrol/wifiremotecontrol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/android-remote-control-pc-bluetooth.iml" filepath="$PROJECT_DIR$/.idea/android-remote-control-pc-bluetooth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android-remote-control-pc-bluetooth.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android-remote-control-pc-bluetooth.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bluetoothremote/android-remote-control-pc-bluetooth.bluetoothremote.iml" filepath="$PROJECT_DIR$/.idea/modules/bluetoothremote/android-remote-control-pc-bluetooth.bluetoothremote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/android-remote-control-pc-bluetooth.server.iml" filepath="$PROJECT_DIR$/.idea/modules/server/android-remote-control-pc-bluetooth.server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wifiremotecontrol/android-remote-control-pc-bluetooth.wifiremotecontrol.iml" filepath="$PROJECT_DIR$/.idea/modules/wifiremotecontrol/android-remote-control-pc-bluetooth.wifiremotecontrol.iml" />
     </modules>
   </component>
 </project>
